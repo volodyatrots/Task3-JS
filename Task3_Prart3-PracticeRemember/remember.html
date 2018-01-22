@@ -1,0 +1,34 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>found </title>
+</head>
+<body>
+  <h1 class="result">---</div>
+  <script>
+  //Íàïèñàòè ôóíêö³ş, ÿêà áóäå âèâîäèòè ñèìâîëè (âêëş÷àş÷è ïğîáûëè, öèôğè) ÿê³ ïîâòîğşşòñÿ â ñòğîö³
+
+  function remember(array) {
+  var result = [];
+  array.forEach(function(element, index) {
+    if (array.indexOf(element, index + 1) > -1) {
+      if (result.indexOf(element) === -1) {
+        result.push(element);
+      }
+    }
+  });
+  return result;
+  }
+  var str="Pippi!";
+  var arr=str.split("");
+  console.log( remember(arr));
+  
+// remember("apple") => returns ["p"]
+// remember("apPle") => returns []          // "p" != "P"
+// remember("pippi") => returns ["p","i"]
+// remember('Pippi') => returns ["p","i"]
+  </script>
+</body>
+</html>
